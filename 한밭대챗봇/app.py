@@ -70,8 +70,8 @@ def get_image_as_base64(file_path):
         return None
 
 # 로고 및 배경 이미지 경로 설정 (동일한 이미지 파일 사용)
-LOGO_FILENAME = "한밭대로고.jpg" # 실제 로고 파일명으로 변경하세요
-BACKGROUND_IMAGE_FILENAME = "한밭대로고.jpg" # 실제 배경 파일명으로 변경하세요
+LOGO_FILENAME = "logo.jpg" # 실제 로고 파일명으로 변경하세요
+BACKGROUND_IMAGE_FILENAME = "logo.jpg" # 실제 배경 파일명으로 변경하세요
 
 # 이미지 Base64 인코딩 실행
 encoded_logo_image = get_image_as_base64(LOGO_FILENAME)
@@ -615,9 +615,9 @@ def setup_rag(api_key): # API 키만 인자로 받도록 변경
     doc_dir = "."
     documents = []
     file_names = [
-        "국립한밭대학교 학칙.txt", "이수 학점 체계.txt",
-        "장학금 유형, 지침.txt", "학생생활관 관리운영 지침.txt",
-        "학내 무선인터넷(와이파이).txt"
+        "school_rules.txt", "credit_system.txt",
+        "scholarship_guidelines.txt", "dorm_rules.txt",
+        "wifi_info.txt"
     ]
     loaded_any_document = False
     error_files = []
