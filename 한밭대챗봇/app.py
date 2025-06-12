@@ -17,8 +17,11 @@ from langchain.chains import RetrievalQA
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 
-# .env 파일 로드 (스크립트 최상단에 위치 권장)
-load_dotenv()
+if "openai_api_key" in st.secrets:
+    openai.api_key = st.secrets["openai_api_key"]
+else:
+    load_dotenv()
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(page_title="한밭대학교 AI 챗봇", layout="wide", initial_sidebar_state="auto") # 사이드바 초기 상태 변경
 
